@@ -111,3 +111,18 @@ needs, making it more efficient and customized than using a generic solution.
 It not only enhances productivity but also helps in sharing the project with
 others, as they can use the Makefile to quickly set up and understand the
 project's structure and build process.
+
+## Notes
+
+I encountered an issue while trying to install `next-auth@4` with the Next.js
+version (12) that was specified in the original tutorial. It seems that Next.js
+12 is no longer compatible with next-auth@4. To address this, I decided to
+upgrade to the latest version of Next.js. You can view the changes made in the
+upgrade in this pull request:
+
+https://github.com/swmcc/nextjs-prisma-tutorial/pull/1. 
+
+However, I noticed that the deployment is breaking. I suspect this might be
+unrelated to the upgrade, so I plan to continue working through the tutorial
+and will investigate this deployment issue once I've completed the tutorial.
+For now, everything is working as expected in my local environment.
