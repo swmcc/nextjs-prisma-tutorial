@@ -38,3 +38,76 @@ we are. As Albert Einstein once said, *"Once you stop learning, you start
 dying."* 
 
 So, let's continue to learn and grow together. Every day is a school day.
+
+## Development
+
+Run the following commands in order to get a working app.
+
+### Installation
+
+```bash
+  npm install
+  npm i -g vercel@latest
+```
+
+### Sync Environment Variables
+
+```bash
+  make local.sync.env 
+```
+
+If you are using your own postgres db for local development then amend the
+`.env.local.empty` accordingly. Remember to rename it to `.env.local`  
+
+### Export environment vars
+
+I needed to do this to get prisma working properly.
+
+```bash
+  make local.env.load
+```
+
+### Push database schema
+
+```bash
+  make database.push 
+```
+
+### Sync db.schema
+
+```bash
+  make database.sync
+```
+
+### Add test data 
+
+Add a user and link it to a Post using the GUI provided.
+
+```bash
+  make database.studio
+```
+
+### Run local server
+
+```bash
+  make local.run
+```  
+
+## Makefile
+
+For a full list of commands see the
+[Makefile](https://github.com/swmcc/nextjs-prisma-tutorial/blob/main/Makefile).
+
+I use my own Makefile in projects for several reasons. First, it provides a
+consistent and repeatable way to build and manage my projects, ensuring that I
+can recreate the same environment and outcomes across different systems.
+
+Second, it automates the build process, reducing manual steps and the potential
+for errors. 
+
+Finally, by using my own Makefile, I can tailor it to my specific project's
+needs, making it more efficient and customized than using a generic solution. 
+
+It not only enhances productivity but also helps in sharing the project with
+others, as they can use the Makefile to quickly set up and understand the
+project's structure and build process.
